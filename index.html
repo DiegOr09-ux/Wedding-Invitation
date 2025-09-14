@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Mayra & Alejandro</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -45,8 +47,10 @@
         </section>
 
         <!--Ceremonia-->
+        <br>
+        <br>
         <section class="ceremony">
-            <img src="anillo-de-bodas.png" alt="together">
+            <img src="wedding.gif" alt="together" class="icons">
             <h2>CEREMONIA</h2>
             <P>Parroquia de Nuestra Señora del Refugio</P>
             <P>Te esperamos el</P>
@@ -65,8 +69,10 @@
         </section>
 
         <!-- Celebracion -->
+        <br>
+        <br>
         <section class="location">
-            <img src="salud.png" alt="Celebracion">
+            <img src="cheers.gif" alt="Celebracion" class="icons">
             <h2>CELEBRACIÓN</h2>
             <p>Casa de la novia</p>
             <p>La Celebración sera el</p>
@@ -86,22 +92,93 @@
 
         <!--Album-->
         <section class="album">
-            <img src="camara.png" alt="album">
+            <br>
+            <br>
+            <img src="camera.gif" alt="album" class="icons">
             <h2 class="album-title">COMPARTE FOTOS</h2>
             <P class="album-text">Sube fotos de la boda al álbum!</P>
-            <a href="google.com" class="btn-album">SUBIR FOTO</a>
+            <a href="https://photos.app.goo.gl/v8v1dQ31z2fyADh96" target="_blank" class="btn-album">SUBIR FOTO</a>
+            <br>
+            <br>
         </section>
 
-        <!-- Condirmacion Whatsapp -->
-        <section class="rsvp">
-            <h2>Confirma tu asistencia</h2>
-            
-            <a href="https://wa.me/524492523623?text=¡Confirmo mi asistencia a la boda!" class="btn">Confirmo mi asistencia</a>
+        <!--Gallery-->
+        <section class="Gallery">
+            <h2 class="section-title">Nuestros Momentos</h2>
+
+            <div class="collage-grid">
+                <div class="collage-item">
+                    <img src="Photo7.jpeg" alt="Novios 1">
+                </div>
+                <div class="collage-item wide-photo">
+                    <img src="Photo1.jpeg" alt="Novios 2">
+                </div>
+                <div class="collage-item wide-photo">
+                    <img src="Photo3.jpeg" alt="Novios 3">
+                </div>
+                <div class="collage-item">
+                    <img src="Photo2.jpeg" alt="Novios 4">
+                </div>
+                <div class="collage-item">
+                    <img src="Photo5.jpg" alt="Novios 5">
+                </div>
+                <div class="collage-item wide-photo">
+                    <img src="Photo6.jpeg" alt="Novios 5">
+                </div>
+                <div class="collage-item">
+                    <img src="Photo4.jpeg" alt="Novios 5">
+                </div>
+</div>
         </section>
+
+        <!-- Confirmacion Formulario -->
+        <section class="rsvp">
+        <!--    <a href="https://wa.me/524492911684?text=¡Confirmo mi asistencia a la boda!" class="btn">Confirmo mi asistencia</a>-->
+
+            <h2>Confirma tu asistencia</h2>
+            <a id="showFormBtn" class="btn" href="#">Confirmar mi asistencia</a>
+
+            <div id="formContainer" style="display: none;">
+                <a id="hideFormBtn" class="btn" href="#">Cerrar</a>
+                <br>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLH7cHt6ugBLEMW-Y0E4e_ms6W28fdXl3P-u1xttDNYVEGNg/viewform?embedded=true" width="500" height="441" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            </div>
+        </section>
+
+        <section class="agradecimientos">
+            <br><br><br><br><br>
+            <h1 class="thanktext">Te Esperamos</h1>
+            <br><br>
+            <p class="thankname">Mayra y Alejandro</p>
+            <br><br><br><br><br>
+        </section>
+
+        <script>
+            const showBtn = document.getElementById('showFormBtn');
+            const hideBtn = document.getElementById('hideFormBtn');
+            const formContainer = document.getElementById('formContainer');
+
+            showBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Evita que la página suba
+                formContainer.style.display = 'block';
+                showBtn.style.display = 'none';
+            });
+
+            hideBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Evita que la página suba
+                formContainer.style.display = 'none';
+                showBtn.style.display = 'block';
+            });
+        </script>
 
         
     </div>
 
     <script src="script.js"></script>
 </body>
+
+<footer class="credits">
+    <small>© 2025 Invitación diseñada por D.O. Studio</small>
+</footer>
+
 </html>
